@@ -1,0 +1,436 @@
+ /* styles.css */
+
+/* html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+body {
+    --bg-image: url('src/assets/blue.jpeg');
+    --background-color: #e4e5f1;
+    --text-color: black;
+}
+
+body.dark {
+    --bg-image: url('src/assets/wp5162474.webp');
+    --background-color: 0000000;
+    --text-color: ivory;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.bg-image {
+    position: relative;
+    background-image: var(--bg-image);
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.icon {
+    font-size: 20px; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button {
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    background-color: blue;
+    margin: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    font-size: large;
+    vertical-align: middle;
+}
+body.dark .search button{
+    background-color: #aa5da7;
+    color: aliceblue;
+}
+.search input {
+    padding: 10px;
+    margin: 5px;
+    width: 400px;
+    border-radius: 25px;
+}
+.search input:focus {
+    background-color: beige;
+}
+body.dark .search input{
+    border: none;
+    background-color: #5f325e;
+}
+.top { 
+    display: flex;
+    flex-direction: row;
+}
+
+.panel {
+    background-color: 	#d2d3db;
+    height: auto;
+    width: 800px;
+    min-height: 470px;
+    border-radius: 15px;
+}
+body.dark .panel {
+    background-color: #333;  
+    color: var(--text-color);   
+}          
+
+.feel {
+    display: inline;
+}
+
+.feel img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    box-shadow: #fff;
+    fill-opacity: #fff;
+}
+body.dark .feel img{
+    filter: none;
+    fill-opacity: #fff;
+}
+
+.feel p {
+    font-size: larger;
+    font-weight: 700;
+    margin: 0;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.footer {
+    display: inline;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.footer p {
+    text-align: center;
+    font-size: larger;
+    font-weight: 400;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.footer p strong {
+    font-size: 40px;
+}
+
+.days {
+    width: 100px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 15px;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+body.dark .days{
+    background-color: #50384b;
+}
+
+.days p {
+    text-align: center;
+    margin: 0;
+}
+
+.days img {
+    align-content: center;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 10px;
+}
+
+#fore {
+    top: 0;
+}
+
+.temps {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.temps .temp {
+    margin-left: 7px;
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.temps p {
+    margin: 0;
+}
+
+.weath {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.weath p {
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px;
+}
+
+.sun img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.sun p {
+    margin: 0;
+    text-align: center;
+}
+
+.tn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    margin-top: 20px;
+    border: hidden;
+    border-radius: 15px;
+    background-color: #3a1532;
+    padding: 10px;
+    margin: 10px;
+}
+ */
+
+ .search{
+    border-radius: 25px;
+    outline: none;
+}
+input{
+    width: 25%;
+}
+body {
+    --bg-image: url('src/assets/blue.jpeg');
+    --background-color: #e4e5f1;
+    --text-color: black;
+}
+
+body.dark {
+    --bg-image: url('src/assets/wp5162474.webp');
+    --background-color: 0000000;
+    --text-color: ivory;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.bg-image {
+    position: relative;
+    background-image: var(--bg-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.tn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    margin-top: 20px;
+    border: hidden;
+    border-radius: 15px;
+    background-color: #3a1532;
+    padding: 10px;
+    margin: 10px;
+} 
+.top {
+    display: flex;
+    justify-content: space-between; /* Adds space between the columns */
+    align-items: center; /* Aligns items vertically */
+    padding: 10px; /* Adds padding to the container */
+  }
+  
+  .temp, .col {
+    margin: 0 10px; /* Adds horizontal spacing between the elements */
+  }
+  
+  .temp p, .col p {
+    margin: 5px 0; /* Reduces spacing between paragraphs */
+  }
+  
+  img {
+    width: 50px; /* Sets a fixed size for the weather icon */
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 5px;
+  }
+.temp{
+    display: flex;
+    flex-direction: column;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+}
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows panels to wrap to the next row */
+    gap: 15px; /* Adds space between panels */
+    justify-content: center; /* Centers the panels in the container */
+  }
+  
+.panel {
+    width: 120px; /* Set fixed width for each panel */
+    height: auto;
+    background-color: #441eec;
+    border-radius: 15px;
+    opacity: 0.9;
+    overflow: hidden;
+    padding: 10px; /* Adds inner padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    text-align: center; /* Centers text inside the panel */
+  }
+  body.dark .panel {
+    background-color: #3a1532;  
+    color: var(--text-color);   
+}          
+  
+  .day-name {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .weather-icon {
+    width: 40px; /* Adjust size for weather icons */
+    height: 40px;
+    object-fit: contain;
+    margin: 10px 0; /* Adds space around the icon */
+  }
+  
+  .weather-condition {
+    margin: 0;
+    font-size: 12px;
+    color: #fff;
+  }
+  
+  .card{
+    position: absolute;
+    top: 90px;
+    left: 30%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px;
+}
+
+.sun img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.sun p {
+    margin: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .bg-image{
+        background-size: cover;
+    }
+    .top {
+      flex-direction: column; /* Stack columns vertically */
+      align-items: flex-start; /* Align items to the left */
+    }
+  
+    .temp, .col {
+      margin: 10px 0; /* Adds spacing between stacked items */
+    }
+  
+    img {
+      width: 40px; /* Adjust icon size for smaller screens */
+      height: 40px;
+    }
+    .card{
+        top: 110px;
+        left: 20%;
+    }
+  }
+  
+  /* Media Query for Extra Small Screens */
+  @media screen and (max-width: 480px) {
+    .card{
+        top: 110px;
+        left: 20%;
+    }
+    input{
+        width: 50%;
+    }
+
+    .bg-image{
+        background-size: cover;
+    }
+    .top {
+      padding: 5px; /* Reduce padding for extra small screens */
+    }
+  
+    .temp p, .col p {
+      font-size: 14px; /* Adjust font size */
+    }
+  
+    img {
+      width: 35px; /* Smaller icon size for very small screens */
+      height: 35px;
+    }
+  }
+  

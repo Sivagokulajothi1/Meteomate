@@ -1,0 +1,35 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .search-bar {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .search-button {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .weather-results {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .text-center{
+    text-align: center;
+  }
+  

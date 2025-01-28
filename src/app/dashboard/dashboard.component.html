@@ -1,0 +1,115 @@
+
+<div class="d-flex align-items-center justify-content-center gap-3 mb-4 " >
+    <input type="text" [(ngModel)]="city" class="p-2 search flex-shrink-1" placeholder="search for you perferred city" (input)="search($event)">
+    <button type="submit" (click)="getWeatherByLocation()" class="btn btn-success m-5 " >Current location</button>
+</div>
+<div>
+   <div class="row mt-0 g-3">
+    <div  *ngIf="currentWeather">
+          <div class="card text-center d- flex col" >
+           <div class="top">
+            <div class="temp">
+            <p class="ms-1"><strong>{{ currentWeather?.location.name }}</strong></p>  
+            <p>{{ currentWeather?.location?.localtime | date: 'HH:mm' }}</p> 
+            <p >{{ currentWeather?.location?.localtime | date: 'EEE dd MMM' }}</p>
+            </div> 
+            <div class="col" >
+              <img [src]="iconurl" alt="Weather Icon" />
+              <p>{{ currentWeather?.current?.condition.text }}</p>  
+            </div>
+            <div class="col me-0">
+              <p >{{ currentWeather?.current?.temp_c}} °C</p>
+              <p>Feelslike:{{ currentWeather?.current?.feelslike_c}} °C</p>
+            </div>
+           </div>
+           <hr>
+           <div *ngIf="forecastData?.forecast?.forecastday?.length" class="sun">
+            <img src="assets/sunrise.png" alt="sunrise">
+            <p>{{forecastData.forecast.forecastday[0].astro.sunrise}}</p>
+            <img src="assets/sunset.png" alt=" sunset">
+            <p>{{forecastData.forecast.forecastday[0].astro.sunset}}</p>
+          </div>
+           <hr>
+           <div>
+            <div class="forecast-container" *ngIf="forecastData?.forecast?.forecastday?.length > 0">
+              <div class="panel" *ngFor="let item of forecastData.forecast.forecastday; index as i">
+                <p class="day-name">{{ item.date | date: 'EEEE' }}</p>
+                <img [src]="item.day.condition?.icon" alt="Weather Icon" class="weather-icon" />
+                <p class="weather-condition">{{ item.day?.condition?.text }}</p>
+              </div>
+            </div>
+          </div>
+                           
+          </div>
+    </div>
+   </div>
+
+   <div *ngIf="message" class="alert alert-danger">
+    {{message}}
+   </div>
+</div>
+<!-- <div  *ngIf="currentWeather">
+    <div class="panel">
+     <div class="top" >
+      <div class="footer" >
+        <p><strong>{{ currentWeather?.location.name }}</strong></p>  
+        <p>{{ currentWeather?.location?.localtime | date: 'HH:mm' }}</p> 
+        <p>{{ currentWeather?.location?.localtime | date: 'EEE dd MMM' }}</p> 
+      </div>
+      <div class=".feel">
+        <img [src]="iconurl" alt="Weather Icon" />
+        <p>{{ currentWeather?.current?.condition.text }}</p>  
+      </div>
+      <div class="weath" >
+        <p >{{ currentWeather?.current?.temp_c}} °C</p>
+        <p>Feelslike:{{ currentWeather?.current?.feelslike_c}} °C</p>
+      </div>
+      <div class="temps">
+        <p>
+          <strong>Humidity:</strong>
+          {{ currentWeather?.current?.humidity}}
+        </p>
+        <p>
+          <strong>Wind Speed:</strong>
+          {{ currentWeather?.current?.wind_kph}}
+        </p>
+        <p>
+          <strong>Dew Point:</strong>
+          {{ currentWeather?.current?.dewpoint_c}}
+        </p>
+      </div>
+      <div class="temps" >
+        <p>
+          <strong>Visibility:</strong>
+          {{ currentWeather?.current?.vis_km}}
+        </p>
+        <p>
+          <strong>Pressure:</strong>
+          {{ currentWeather?.current?.pressure_mb}}
+        </p>
+        <p>
+          <strong>UV Index:</strong>
+          {{ currentWeather?.current?.uv}}
+        </p>
+      </div>
+     </div>
+     <hr>
+     <div class="weath" *ngIf="forecastData?.forecast?.forecastday?.length" class="sun">
+      <img src="assets/sunrise.png" alt="sunrise">
+      <p>{{forecastData.forecast.forecastday[0].astro.sunrise}}</p>
+      <img src="assets/sunset.png" alt=" sunset">
+      <p>{{forecastData.forecast.forecastday[0].astro.sunset}}</p>
+    </div>
+     <hr>
+     <div class="days" *ngIf="forecastData?.forecast?.forecastday?.length > 0">
+          <div class="day" *ngFor="let item of forecastData.forecast.forecastday;index as i ">
+            <div >
+              <p>{{ item.date | date: 'EEEE' }}</p> 
+              <img [src]="item.day.condition?.icon" alt="Weather Icon" />
+              <p>{{ item.day?.condition?.text}}</p>
+            </div>
+          </div>
+     </div>
+    </div>
+  </div> -->
+  
